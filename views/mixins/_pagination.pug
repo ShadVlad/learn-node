@@ -1,0 +1,10 @@
+mixin pagination(page, pages, count)
+  .pagination
+    .pagination__prev
+      if page > 1
+        a(href=`/stores/page/${page - 1}`) Предыдущая
+    .pagination__text
+      p Страница #{page} из #{pages} — #{count} всего страниц
+    .pagination__next
+      if page < pages
+        a(href=`/stores/page/${parseFloat(page) + 1}`) Следующая
